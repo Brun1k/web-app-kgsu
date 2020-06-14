@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<!--
+    Основано на шаблоне
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Хексов калькулятор</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Найди свое шестнадцатиричное число</h1>
+				<p>Калькулятор скучных чисел, который приятно использовать.<br />
+				Переводите числа в хексы, и думайте о вечном...</p>
+			</header>
+
+<!-- Форма для создания запросов и получения результата -->
+            <form action="{{ url_for('handle_data') }}" method="post">
+				<input type="text" name="text" id="text" placeholder="Введите десятичное число: "/>
+				<input type="submit" value="Перевести в хекс" />
+			</form>
+            <form method="get">
+                <textarea name="message" id="message" rows="1" cols="1" placeholder="Здесь будет результат счета">{{ hex_num }}</textarea>
+            </form>
+
+		<!-- Авторские права -->
+			<footer id="footer">
+				<ul class="copyright">
+					<li>&copy; by Tocik.</li><li>Отдаем должное за шаблон: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		<!-- Информация где находится мой JAVAScript  -->
+			<script src="static/js/main.js"></script>
+
+	</body>
+</html>
